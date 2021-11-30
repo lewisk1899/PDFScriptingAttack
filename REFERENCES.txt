@@ -9,12 +9,3 @@ Programmers: [add name]
 
 PDF parsing tool = https://blog.didierstevens.com/programs/pdf-tools/pdf-parser_V0_7_5.zip
 Utilitzing the parsing tool - https://github.com/filipi86/MalwareAnalysis-in-PDF
-
-
-
-
-Notes:
-##################################################
-To get used to the tool, use Homework01.pdf to 
-learn its capabilities.
-##################################################
