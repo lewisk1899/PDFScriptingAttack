@@ -1,0 +1,11 @@
+#################################################
+ECE509 - INTRO TO CYBERSECURITY
+This is a references page for this project. 
+We are parsing through a simple PDF to understand 
+its interiors. Then adding a "malicious" code to 
+it.
+##################################################
+Programmers: [add name]
+
+PDF parsing tool = https://blog.didierstevens.com/programs/pdf-tools/pdf-parser_V0_7_5.zip
+Utilitzing the parsing tool - https://github.com/filipi86/MalwareAnalysis-in-PDF
