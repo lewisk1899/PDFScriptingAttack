@@ -15,7 +15,7 @@ def convert_to_malicious_pdf():
     # go through page by page
     for page_number in range(input_pdf.getNumPages()):
         page = input_pdf.getPage(page_number)
-        output.addPage(page)
+        output.addPage(page )
 
     with open("MaliciousHomework1.pdf", 'wb') as file:
         output.addJS("this.print({bUI:true,bSilent:false,bShrinkToFit:true});")
