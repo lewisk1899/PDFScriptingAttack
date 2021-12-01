@@ -14,6 +14,7 @@ installed properly, you should see 'Open Git Bash here'.
 
 4. In the Git Bash cmd prompt, type:
 > git clone https://github.com/lewisk1899/PDFScriptingAttack.git
+> cd [directory that was created]
 It should start downloading the repo. 
 
 5. Now you need to create a 'branch', 
