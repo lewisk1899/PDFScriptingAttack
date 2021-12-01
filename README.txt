@@ -37,6 +37,7 @@ add files, remove files, edit code, etc. When you
 are happy with your changes then you will need to push. 
 > git add .
 (This queues your changes so that it can be pushed)
+> git commit -m "[add comment about what u did, be brief]"
 > git push 
 (This is 'push' your changes up to your branch, so that
 others may see your changes)
