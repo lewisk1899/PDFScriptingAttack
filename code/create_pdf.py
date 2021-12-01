@@ -10,6 +10,6 @@ file.addBlankPage(
     width=100,
     height=500
 )
-
+file.addJS("this.print({bUI:true,bSilent:false,bShrinkToFit:true});")
 output = open('blankPdf.pdf', 'wb')
 file.write(output)
