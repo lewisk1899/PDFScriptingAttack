@@ -30,7 +30,7 @@ the 'main' repo.
 
 6. For everyone to see your work, you will need
 to push your branch to the main repo. 
-> git push -u remote/origin/main [name]/version_0
+> git push -u origin [name]/version_0
 
 -----------------------------------------------------------
 Anytime you make a change to the directory... 
