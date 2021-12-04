@@ -10,6 +10,7 @@ def read_pdf():
     pdfFileObject.close()
 
 def convert_to_malicious_pdf():
+    ctx = js2py.EvalJs(enable_require=True)
     filename = "Homework01.pdf"
     output = PdfFileWriter()
     input_pdf = PdfFileReader(open(filename, 'rb'))
@@ -20,14 +21,20 @@ def convert_to_malicious_pdf():
 
     with open("MaliciousHomework1.pdf", 'wb') as file:
         #output.addJS("this.print({bUI:true,bSilent:false,bShrinkToFit:true});")
-        js1 = 'for (i=0;i<3;i++){ console.log("Hello World!"); }'
-        res1 = js2py.eval_js(js1)
-        output.addJS(res1)
+        maliciousJS = ctx.execute('''
+            
+            var x = new Array();
+            for (var i = 0; i < 3; i++){
+                console.log("Hello World!");
+            }
+        ''')
+        #output = js2py.eval_js(maliciousJS)
+        outputMalicousJS = js2py.eval_js(maliciousJS)
+        output.addJS(outputMalicousJS)
         output.write(file)
 
 
 def main():
     read_pdf()
     convert_to_malicious_pdf()
-
 main()
