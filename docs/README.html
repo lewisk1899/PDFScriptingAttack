@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+code {
+  font-family: Consolas,"courier new";
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 75%;
+}
+</style>
+</head>
+<body>
+
+<p>ECE 509 - INTRO TO CYBERSECURITY, SPRING 2021</p>
+<p>PROJECT - PHISHING EMAIL WITH MALICIOUS PDF</p>
+<pre>
+#################################################
+#####  SET UP YOUR SYSTEM FOR THIS PROJECT  #####
+#################################################
+<b>HOW TO USE GITHUB</b>
+1. Install Git Bash, this is a Linux command prompt
+that can be used on Windows machines.
+
+2. Create a directory where you want the project
+to be located. (File explorer or command prompt i.e > mkdir ECE509Project)
+
+3. Then right click in the directory, if you have Git Bash
+installed properly, you should see 'Open Git Bash here'.
+
+4. In the Git Bash cmd prompt, type:
+<code>
+> git clone <a href="https://github.com/lewisk1899/PDFScriptingAttack.git">https://github.com/lewisk1899/PDFScriptingAttack.git</a>
+> cd [directory that was created]
+</code>
+It should start downloading the repo.
+
+5. Now you need to create a 'branch',
+this is where all your work will be placed, it is practically
+a workstation that you can make changes and everyone can see
+and it will not affect anyone elses work.
+Type in Git Bash:
+<code>
+> git branch [name]/version_0
+> git checkout [name]/version_0
+</code>
+git checkout, just moves you to that branch or version of
+the 'main' repo.
+
+6. For everyone to see your work, you will need
+to push your branch to the main repo.
+<code>
+> git push -u origin [name]/version_0
+</code>
+-----------------------------------------------------------
+Anytime you make a change to the directory, be that you
+add files, remove files, edit code, etc. When you
+are happy with your changes then you will need to push.
+<code>
+> git add .
+</code>
+(This queues your changes so that it can be pushed)
+<code>
+> git commit -m "[add comment about what u did, be brief]"
+> git push
+</code>
+This is 'push' your changes up to your branch, so that
+others may see your changes
+
+To make sure that everything is good to go, use
+<code>
+> git status
+</code>
+This is used to see what git sees. Green = good. 
+
+
+#############################################
+#####  TOOLS THAT ARE GOING TO BE USED  #####
+#############################################
+<a href="https://ubuntu.com/appliance/vm">UbuntuVM</a>
+<a href="https://www.python.org/downloads/">Python</a>
+<a href="https://pythonhosted.org/PyPDF2/">PyPDF2</a>
+<a href="https://nodejs.org/en/">Node.js</a>
+<a href="https://kjkpub.nyc3.digitaloceanspaces.com/software/sumatrapdf/rel/SumatraPDF-0.2-install.exe">SumatraPDF</a>
+<a href="https://blog.didierstevens.com/programs/pdf-tools">pdf-tools</a>
+
+
+##############################
+#####  INSTALLING TOOLS  #####
+##############################
+1. Install an Ubuntu VM
+Here is a cheatsheet to help out on how to use it: <a href="https://derekchia.com/multipass/">cheatsheet</a>
+2. Install Python onto your VM
+3. In a UbuntuVM command prompt (if python has been installed)
+<code>
+> pip install PyPDF2 
+</code>
+This tool, PyPDF2, can create PDFs and has a function 'addJS()'
+which will be discussed later. 
+4. Install OpenJDK on VM
+<code>
+> sudo apt install default-jre
+</code>
+Needed to view the Java Max Heap
+5. Install Node.js on VML
+Choose the 'Recommended for most users'
+This is used to run a *.js file, for debugging. 
+
+5. PDF parsing tool: <a href="https://blog.didierstevens.com/programs/pdf-tools">pdf-tools</a>
+This tool helps look into a PDF <i>'pdf-parser_V0_7_5.zip'</i>, on the same page 
+there is a zip that can allow your to embed a Javascript file into a PDF. 
+<a href="https://github.com/filipi86/MalwareAnalysis-in-PDF">MalwareAnalysis-in-PDF</a> to gain more understanding of the tool.
+
+6. Install SumatraPDF
+This is the PDF reader needed, not Adobe (too sophisticated, will be able to detect the attack).
+
+
+#############################
+#####  GETTING STARTED  #####
+#############################
+Before opening the malicious PDF, we first need to establish a base and see
+what changes will be made. 
+
+All of this will be done in the UbuntuVM. 
+
+<b><i>vmstat</i></b>
+Using the command 'vmstat' we are able to see the amount of free memory (free), 
+memory used as buffer (buff) and cache (cache).
+
+<img src="images/vmstat.png">
+
+<b><i>vmstat -s [--stats]</i></b>
+Another way of view the 'vmstat' is using the '-s', displays memory statistics.
+<img src="images/vmstat-s.png">
+
+<b><i>free -h</i></b>
+This displays the amount of free and used memory in the system. The '-h' makes it 
+human readable.
+<img src="images/free-h.png">
+
+<b><i>ulimit -l -q -s -u</i></b>
+Determine the user limits of memory. Look at 'ulimit --help' to view the help page.
+<img src="images/ulimit-l-q-s-u.png">
+
+<b><i>java -XshowSettings:vm</i></b>
+To view the Java maximum heap size. Needed when running a PDF with a malicious *.js file. 
+<img src="images/java-XshowSettingsvm.png">
+</body>
+</html>
