@@ -22,7 +22,7 @@ def convert_to_malicious_pdf():
     with open("MaliciousHomework1.pdf", 'wb') as file:
         #output.addJS("this.print({bUI:true,bSilent:false,bShrinkToFit:true});")
         maliciousJS = ctx.execute('''
-            
+            const v8 = require('v8');
             var x = new Array();
             for (var i = 0; i < 3; i++){
                 console.log("Hello World!");
