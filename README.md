@@ -1,4 +1,14 @@
 # PDFScriptingAttack
+How to install the Virtual Machine:
+ 1) Install the Virtual Machine: https://www.virtualbox.org/ 
+ 2) Download the Ubuntu Disk Image: https://ubuntu.com/download/desktop
+ 3) Refer to the steps in this video to get the virtual machine up and running: https://www.youtube.com/watch?v=sB_5fqiysi4
+How to set-up the virtual machine:
+  1)
+  2)
+  3)
+  
+
 Relevant Material:
 https://github.com/filipi86/MalwareAnalysis-in-PDF
 https://github.com/ohbriansung/phishing_email_pdf_attack
