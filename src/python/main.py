@@ -20,12 +20,7 @@ def convert_to_malicious_pdf():
 
     with open("MaliciousHomework1.pdf", 'wb') as file:
         #output.addJS("this.print({bUI:true,bSilent:false,bShrinkToFit:true});")
-        maliciousJS = '''
-            var x = new Array();
-            for (var i = 0; i < 3; i++){
-                console.log("Hello World!");
-            }
-        '''
+        maliciousJS = """app.alert({cMsg: 'Hello from PDF JavaScript', cTitle: 'Testing PDF JavaScript', nIcon: 3});"""
         outputMaliciousJS = js2py.eval_js(maliciousJS)
         output.addJS(maliciousJS)
         output.write(file)
