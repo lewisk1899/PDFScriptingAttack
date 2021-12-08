@@ -23,8 +23,10 @@ How to execute this attack:
   /Win << /F (c:\\(filepath to the executable).exe >> >>
  7) After replacing the two portions of the code, you should have a pdf that is capable of executing an executable on most pdf readers, you will have to hope that the user does not read the pop up and just willingly accepts.
 
+Malicious Exectuable can be viewed in the github repo.
 
 Relevant Material:
 1) https://github.com/filipi86/MalwareAnalysis-in-PDF
-6) https://blog.didierstevens.com/programs/pdf-tools/
-7) https://www.blackhat.com/presentations/bh-europe-07/Sotirov/Presentation/bh-eu-07-sotirov-apr19.pdf
+2) https://blog.didierstevens.com/programs/pdf-tools/
+3)https://labs.appligent.com/pdfblog/pdf_cross_reference_table/#:~:text=The%20PDF%20Cross%20Reference%20Table%20%28xref%29%20is%20the,the%20file%20has%20been%20incrementally%20saved%20or%20linearized
+4) https://web-in-security.blogspot.com/2021/01/insecure-features-in-pdfs.html
