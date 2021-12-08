@@ -19,3 +19,13 @@ Opening the PDF will trigger the HTML file to open as well due to the applicatio
 To view the effects of this heap spray attack one can use Immunity Debugger to view the heap. Open Immunity Debugger and attach Internet Explorer 7 onto the debugger. Then type the following mona.py command in the Immunity Debugger command line to find our malicious code:
 
 ```!mona find -s "ECE509 student ATTACK"```
+
+### Relevant Links
+- https://www.corelan.be/index.php/2011/12/31/exploit-writing-tutorial-part-11-heap-spraying-demystified/
+- https://www.immunityinc.com/products/debugger/
+- https://github.com/corelan/mona
+- http://finalbuilds.com/iecollection.htm
+- http://finalbuilds.com/adobereader.htm
+- https://eternal-todo.com/blog/application-execution-pdf
+
+
