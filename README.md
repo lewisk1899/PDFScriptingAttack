@@ -6,7 +6,7 @@ to launch a malicious attack.
 
 Contents:
 PDFAsATrigger
- - A malicious PDF redirecting to a server.
+> - A malicious PDF redirecting to a server.
 PDFHeapAttack
  - A malicious PDF launching a heap spraying attack.
 ECE 509 - Project Proposal.pdf
