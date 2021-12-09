@@ -21,5 +21,5 @@ Emmet Gormican
 Sina Malek - https://www.linkedin.com/in/maleksina1998/  
 
 *********************************************************  
-THIS IS FOR ACADEMIC PURPOSES ONLY AND WAS CONDUCTED IN A SAFE ENVIORNMENT   
-*********************************************************  
+THIS IS FOR **ACADEMIC PURPOSES** ONLY AND WAS CONDUCTED IN A **SAFE ENVIORNMENT**  
+********************************************************  
