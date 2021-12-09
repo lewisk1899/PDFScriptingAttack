@@ -9,7 +9,7 @@ to launch a malicious attack.
 > A malicious PDF redirecting to a server.
 - PDFHeapAttack
 > A malicious PDF launching a heap spraying attack.
--ECE 509 - Project Proposal.pdf
+- ECE 509 - Project Proposal.pdf
 > The proposal of the project about the attack. 
 - PDFScriptingAttack Final Paper.pdf
 > Final report of the projects above. 
